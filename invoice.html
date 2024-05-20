@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="invoice.css">
+  <script src="invoice.js" defer></script>
+  <title>Invoice App</title>
+</head>
+
+<body>
+  <div id="content">
+    <!-- Header Section -->
+    <header>
+      <div class="logo">
+        <img src="./assets/logo.svg" alt="logo-svg">
+      </div>
+      <div class="flex-wrap">
+        <div class="theme-icon">
+          <img id="icon-moon" src="./assets/icon-moon.svg" alt="icon-moon">
+          <img id="icon-sun" src="./assets/icon-sun.svg" alt="icon-sun">
+        </div>
+        <div class="line"></div>
+        <img class="image-avatar" src="./assets/image-avatar.jpg" alt="">
+      </div>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+      <section class="viewInvoice">
+        <div class="goBack">
+          <img src="./assets/icon-arrow-left.svg" alt="icon-arrow-left">
+          <p class="goBack-p">Go back</p>
+        </div>
+
+        <div class="statusContent">
+          <p class="Satus-p">Status</p>
+          <div class="verification">
+            <div id="statusInfo"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mainSection">
+        <div id="container">
+          <div class="proff-location">
+            <div id="profession"></div>
+            <div id="locationInfo"></div>
+          </div>
+          <div class="date-payment-bill">
+            <div class="flex-column">
+              <div id="invoiceDate">
+                <span class="invoiceDate-span">Invoice Date</span>
+              </div>
+              <div id="paymentDue">
+                <span class="paymentDue-span">Payment Due</span>
+              </div>
+            </div>
+            <div id="bill">
+              <span class="billTo">Bill To</span>
+            </div>
+          </div>
+          <div id="sendMail">
+            <span class="sendMail-span">Sent to</span>
+          </div>
+          <div class="designPrice">
+            <div id="bannerDesign">
+              <div id="first-name-amount"></div>
+              <div id="first-price"></div>
+            </div>
+            <div id="emailDesign">
+              <div id="second-name-amount"></div>
+              <div id="second-price"></div>
+            </div>
+          </div>
+          <div id="pinkContainer">
+            <p class="grandTotal">Grand Total</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--Footer Section  -->
+    <footer>
+      <section class="footerSection">
+        <div class="buttonContainer">
+          <button id="editBtn">Edit</button>
+          <button id="deleteBtn">Delete</button>
+          <button id="markBtn">Mark as Paid</button>
+        </div>
+      </section>
+    </footer>
+  </div>
+
+
+  <!-- Delete Prompt -->
+  <div id="deleteContainer">
+    <div id="deletionNote">
+      <h2 class="Deletion">Confirm Deletion</h2>
+    </div>
+    <div class="deleteContainerButtons">
+      <button id="Cancel-btn">Cancel</button>
+      <button id="Delete-btn">Delete</button>
+    </div>
+  </div>
+</body>
+
+</html>
