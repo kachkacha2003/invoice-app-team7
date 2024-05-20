@@ -5,16 +5,19 @@ let content = document.getElementById("content")
 let iconSun = document.getElementById("icon-sun");
 let iconMoon = document.getElementById("icon-moon");
 
+
 iconMoon.addEventListener("click", () => {
     iconSun.style.display = "block";
     iconMoon.style.display = "none";
 
-
+    body.classList.add("dark");
 })
 
 iconSun.addEventListener("click", () => {
     iconMoon.style.display = "block";
     iconSun.style.display = "none"
+
+    body.classList.remove("dark")
 });
 
 let statusInfo = document.getElementById("statusInfo")
@@ -51,7 +54,6 @@ let CanelBtn = document.getElementById("Cancel-btn");
 let editBtn = document.getElementById("editBtn")
 
 let invoceId = "XM9141";
-
 
 
 async function fetchData() {
