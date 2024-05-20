@@ -1,0 +1,681 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: "League Spartan", sans-serif;
+    background: var(--11, #F8F8FB);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    position: relative;
+
+}
+
+/* Header Section */
+header {
+    width: 100%;
+    background: #373B53;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    background: #7c5dfa;
+    width: 72px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 20px 20px 0;
+}
+
+.flex-wrap {
+    display: flex;
+    gap: 24px;
+    margin-right: 24px;
+}
+
+.theme-icon {
+    display: flex;
+    align-items: center;
+}
+
+#icon-sun {
+    display: none;
+}
+
+
+.line {
+    width: 1px;
+    height: 72px;
+    background-color: #494e6e;
+}
+
+.image-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    align-self: center;
+}
+
+/* Invoice Section */
+.goBack {
+    display: flex;
+    align-items: center;
+    margin-top: 32px;
+    margin-left: 24px;
+}
+
+.goBack-p {
+    color: var(--08, #0C0E16);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    padding-left: 24px;
+}
+
+.goBack-p:hover {
+    cursor: pointer;
+    color: var(--07, #7E88C3);
+}
+
+.statusContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 327px;
+    height: 91px;
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.10);
+    margin: 31px 0 16px;
+    padding: 24px 24px 27px;
+}
+
+#statusInfo {
+    display: flex;
+    gap: 8px;
+}
+
+.Satus-p {
+    color: #858BB2;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 15px;
+    letter-spacing: -0.1px;
+}
+
+.verification {
+    display: flex;
+    gap: 8px;
+    width: 104px;
+    height: 40px;
+    border-radius: 6px;
+    align-items: center;
+    justify-content: center;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background: #FF8F00;
+    border-radius: 50%;
+}
+
+.Pending-p {
+    color: #FF8F00;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+}
+
+
+/* Main Section */
+
+.mainSection {
+    width: 327px;
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.10);
+    padding: 25px 24px 24px 24px;
+}
+
+.proff-location {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.invoice-id {
+    color: var(--08, #0C0E16);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+}
+
+.symbol {
+    color: var(--07, #7E88C3);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+}
+
+.profession-p {
+    color: var(--07, #7E88C3);
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 15px;
+    letter-spacing: -0.1px;
+}
+
+
+.senderAddress {
+    color: var(--07, #7E88C3);
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: -0.1px;
+}
+
+.date-payment-bill {
+    display: flex;
+    gap: 61px;
+    margin-top: 31px;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+}
+
+.invoiceDate-span {
+    color: var(--07, #7E88C3);
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 15px;
+    letter-spacing: -0.1px;
+}
+
+.paymentDue-span {
+    color: var(--07, #7E88C3);
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 15px;
+    letter-spacing: -0.1px;
+}
+
+.createdDate {
+    color: var(--08, #0C0E16);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: -0.25px;
+    padding-top: 13px;
+}
+
+.paymentDate {
+    color: var(--08, #0C0E16);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: -0.25px;
+    padding-top: 13px;
+}
+
+.billTo {
+    color: var(--07, #7E88C3);
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 15px;
+    letter-spacing: -0.1px;
+}
+
+.clientName {
+    color: var(--08, #0C0E16);
+    font-family: "League Spartan";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: -0.25px;
+    padding-top: 13px;
+}
+
+.clientAdress {
+    color: var(--07, #7E88C3);
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: -0.1px;
+    padding-top: 7px;
+}
+
+#sendMail {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    margin-top: 33px;
+}
+
+.sendMail-span {
+    color: var(--07, #7E88C3);
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 15px;
+    letter-spacing: -0.1px;
+}
+
+.clientEmail {
+    color: var(--08, #0C0E16);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: -0.25px;
+}
+
+
+.designPrice {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 61px;
+    background: #F9FAFE;
+}
+
+#bannerDesign {
+    display: flex;
+    align-items: center;
+    padding: 25px 24px 23px 24px;
+    justify-content: space-between;
+}
+
+#first-name-amount {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.firstItemsName {
+    color: var(--08, #0C0E16);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+}
+
+.firstItemsQuantity {
+    color: var(--07, #7E88C3);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+}
+
+.firstItemsPrice {
+    color: var(--08, #0C0E16);
+    text-align: right;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+}
+
+#emailDesign {
+    display: flex;
+    align-items: center;
+    padding: 25px 24px 23px 24px;
+    justify-content: space-between;
+}
+
+#second-name-amount {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.secondItemsName {
+    color: var(--08, #0C0E16);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+}
+
+.secondItemsQuantity {
+    color: var(--07, #7E88C3);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+}
+
+.secondItemsPrice {
+    color: var(--08, #0C0E16);
+    text-align: right;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+}
+
+#pinkContainer {
+    width: 279px;
+    height: 80px;
+    border-radius: 0px 0px 8px 8px;
+    background: #373B53;
+}
+
+#pinkContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 26px 24px 22px 24px;
+}
+
+.grandTotal {
+    color: #FFF;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: -0.1px;
+}
+
+.invoceTotal {
+    color: #FFF;
+    text-align: right;
+    font-family: "League Spartan";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.5px;
+}
+
+
+/* Footer Section */
+.footerSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 375px;
+    height: 91px;
+    background: #FFF;
+    box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.10);
+    margin-top: 56px;
+}
+
+.buttonContainer {
+    display: flex;
+    gap: 8px;
+}
+
+#editBtn {
+    border: none;
+    width: 73px;
+    height: 48px;
+    border-radius: 24px;
+    background: #F9FAFE;
+
+    color: var(--07, #7E88C3);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+}
+
+#editBtn:hover {
+    cursor: pointer;
+    background: var(--05, #DFE3FA);
+}
+
+#deleteBtn {
+    border: none;
+    width: 89px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 24px;
+    background: var(--08, #EC5757);
+
+    color: #FFF;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+}
+
+#deleteBtn:hover {
+    cursor: pointer;
+    background: var(--10, #FF9797);
+}
+
+#markBtn {
+    border: none;
+    width: 149px;
+    height: 48px;
+    border-radius: 24px;
+    background: var(--01, #7C5DFA);
+
+    color: #FFF;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+}
+
+#markBtn:hover {
+    cursor: pointer;
+    background: var(--02, #9277FF);
+}
+
+/* Delete Container */
+#deleteContainer {
+    width: 327px;
+    height: 220px;
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.10);
+    padding: 34px 32px 32px 32px;
+    display: none;
+    position: absolute;
+    top: 440px;
+
+}
+
+#deletionNote {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.Deletion {
+    color: var(--08, #0C0E16);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.5px;
+}
+
+.promptDelete-p {
+    color: var(--06, #888EB0);
+    font-family: "League Spartan";
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: -0.1px;
+}
+
+.deleteContainerButtons {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+    margin-top: 22px;
+}
+
+#Cancel-btn {
+    width: 91px;
+    height: 48px;
+    border-radius: 24px;
+    background: #F9FAFE;
+    border: none;
+
+    color: var(--07, #7E88C3);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+}
+
+#Delete-btn {
+    width: 91px;
+    height: 48px;
+    border-radius: 24px;
+    background: var(--08, #EC5757);
+    border: none;
+
+    color: #FFF;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+}
+
+#Cancel-btn:hover {
+    cursor: pointer;
+    background: var(--05, #DFE3FA);
+}
+
+#Delete-btn:hover {
+    cursor: pointer;
+    background: var(--10, #FF9797);
+}
+
+
+/* Dark Theme */
+.dark #content {
+    background: var(--12, #141625);
+}
+
+.dark .goBack-p {
+    color: #FFF;
+}
+
+.dark .statusContent {
+    background: var(--03, #1E2139);
+    box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.10);
+}
+
+.dark .mainSection {
+    background: var(--03, #1E2139);
+    box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.10);
+}
+
+.dark .invoice-id {
+    color: #FFF;
+}
+
+.dark .profession-p {
+    color: var(--05, #DFE3FA);
+}
+
+.dark .senderAddress {
+    color: var(--05, #DFE3FA);
+}
+
+.dark .invoiceDate-span {
+    color: var(--05, #DFE3FA);
+}
+
+.dark .createdDate {
+    color: #FFF
+}
+
+.dark .paymentDue-span {
+    color: var(--05, #DFE3FA);
+}
+
+.dark .paymentDate {
+    color: #FFF
+}
+
+.dark .billTo {
+    color: var(--05, #DFE3FA);
+}
+
+.dark .clientName {
+    color: #FFF;
+}
+
+.dark .clientAdress {
+    color: var(--05, #DFE3FA);
+}
+
+.dark .sendMail-span {
+    color: var(--05, #DFE3FA);
+}
+
+.dark .clientEmail {
+    color: #FFF;
+}
+
+.dark .designPrice {
+    background: var(--04, #252945);
+}
+
+.dark .firstItemsName {
+    color: #FFF;
+}
+
+.dark .firstItemsQuantity {
+    color: var(--06, #888EB0);
+}
+
+.dark .firstItemsPrice {
+    color: #FFF;
+}
+
+.dark .secondItemsName {
+    color: #FFF;
+}
+
+.dark .secondItemsQuantity {
+    color: var(--06, #888EB0);
+}
+
+.dark .secondItemsPrice {
+    color: #FFF;
+}
+
+.dark .pinkContainer {
+    background: var(--08, #0C0E16);
+}
+
+.dark .footerSection {
+    background: var(--03, #1E2139);
+    box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.10);
+}
+
+.dark #editBtn {
+    background: var(--04, #252945);
+}
