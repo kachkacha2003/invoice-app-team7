@@ -6,6 +6,31 @@
     box-sizing: border-box;
 }
 
+/* DISPLAY NINE */
+.AmountDue {
+    display: none;
+}
+
+.itemName {
+    display: none;
+}
+
+.buttonContainer-tablet {
+    display: none;
+}
+
+.clientEmail-tablet {
+    display: none;
+}
+
+.sendMail-span-tablet {
+    display: none;
+}
+
+.itemNameTitles {
+    display: none;
+}
+
 body {
     width: 100%;
     min-height: 100vh;
@@ -36,7 +61,7 @@ header {
 }
 
 .logo {
-    background: #7c5dfa;
+    background-image: linear-gradient(#7c5dfa, #9277ff);
     width: 72px;
     height: 72px;
     display: flex;
@@ -56,8 +81,13 @@ header {
     align-items: center;
 }
 
+#icon-moon {
+    cursor: pointer;
+}
+
 #icon-sun {
     display: none;
+    cursor: pointer;
 }
 
 
@@ -667,8 +697,8 @@ header {
     color: #FFF;
 }
 
-.dark .pinkContainer {
-    background: var(--08, #0C0E16);
+.dark #pinkContainer {
+    background: #0c0e16;
 }
 
 .dark .footerSection {
@@ -678,4 +708,315 @@ header {
 
 .dark #editBtn {
     background: var(--04, #252945);
+}
+
+.dark .buttonContainer-tablet {
+    background: var(--03, #1E2139);
+    box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.10);
+}
+
+.dark .clientEmail-tablet {
+    color: #FFF;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: -0.25px;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+    header {
+        width: 768px;
+    }
+
+    .flex-wrap {
+        gap: 32px;
+        margin-right: 32px;
+    }
+
+    .logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .mainSection {
+        width: 688px;
+    }
+
+    .goBack {
+        margin: 0;
+        margin-top: 49px;
+    }
+
+    .statusContent {
+        width: 688px;
+        display: flex;
+        align-items: center;
+        padding: 20px 32px 20px 32px;
+        margin: 31px 0 24px 0;
+    }
+
+    .verification {
+        align-items: center;
+    }
+
+    .footerSection {
+        display: none;
+    }
+
+    .buttonContainer-tablet {
+        display: flex;
+        background-color: #fff;
+        margin-left: 156px;
+    }
+
+    #markBtn {
+        width: 131px;
+    }
+
+    .buttonContainer-tablet {
+        display: flex;
+        gap: 8px;
+    }
+
+    .mainSection {
+        padding: 32px;
+        margin-bottom: 135px;
+    }
+
+    .proff-location {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #profession {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+    }
+
+    .senderAddress {
+        text-align: end;
+    }
+
+    #sendMail {
+        display: none;
+    }
+
+    .sendMail-span-tablet {
+        display: block;
+    }
+
+    .sendMail-span-tablet {
+        color: var(--07, #7E88C3);
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 15px;
+        letter-spacing: -0.1px;
+    }
+
+    .clientEmail-tablet {
+        display: block;
+        color: var(--08, #0C0E16);
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 20px;
+        letter-spacing: -0.25px;
+        padding-top: 13px;
+    }
+
+    .clientEmail {
+        padding-top: 13px;
+    }
+
+    .date-payment-bill {
+        margin-top: 21px;
+        gap: 118px;
+    }
+
+    .designPrice {
+        margin-top: 48px;
+        gap: 0px;
+        padding: 33px 34px 39px 32px;
+    }
+
+    #first-name-amount {
+        flex-direction: row;
+    }
+
+    .itemName {
+        display: block;
+        color: var(--07, #7E88C3);
+        font-family: "League Spartan";
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 18px;
+        /* 138.462% */
+        letter-spacing: -0.1px;
+    }
+
+    #bannerDesign {
+        padding: 0;
+        margin-top: 31px;
+    }
+
+    #emailDesign {
+        padding: 0;
+        margin-top: 31px;
+    }
+
+    #pinkContainer {
+        width: 624px;
+        padding: 27px 32px 21px 32px;
+    }
+
+    .grandTotal {
+        display: none;
+    }
+
+    .AmountDue {
+        display: block;
+        color: #FFF;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 18px;
+        letter-spacing: -0.1px;
+    }
+
+    #second-name-amount {
+        flex-direction: row;
+    }
+
+    #deleteContainer {
+        width: 480px;
+        height: 249px;
+        padding: 51px 48px 48px 48px;
+        top: 390px;
+    }
+
+    #deleteNote {
+        gap: 12px;
+    }
+
+    .deleteContainerButtons {
+        margin-top: 14px;
+    }
+
+
+    #deleteBtn-tablet {
+        border: none;
+        width: 89px;
+        height: 48px;
+        flex-shrink: 0;
+        border-radius: 24px;
+        background: var(--08, #EC5757);
+
+        color: #FFF;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 15px;
+        letter-spacing: -0.25px;
+    }
+
+    #editBtn-tablet {
+        border: none;
+        width: 73px;
+        height: 48px;
+        border-radius: 24px;
+        background: #F9FAFE;
+
+        color: var(--07, #7E88C3);
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 15px;
+        letter-spacing: -0.25px;
+    }
+
+    #markBtn-tablet {
+        border: none;
+        width: 149px;
+        height: 48px;
+        border-radius: 24px;
+        background: var(--01, #7C5DFA);
+
+        color: #FFF;
+        text-align: center;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 15px;
+        letter-spacing: -0.25px;
+    }
+
+    #deleteBtn-tablet:hover {
+        cursor: pointer;
+        background: var(--10, #FF9797);
+    }
+
+    #editBtn-tablet:hover {
+        cursor: pointer;
+        background: var(--05, #DFE3FA);
+    }
+
+    #markBtn-tablet:hover {
+        cursor: pointer;
+        background: var(--02, #9277FF);
+    }
+
+    .itemNameTitles {
+        display: block;
+    }
+
+    .itemNameTitles {
+        display: flex;
+        align-items: center;
+    }
+
+    .QTY {
+        color: var(--07, #7E88C3);
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 18px;
+        letter-spacing: -0.1px;
+        padding-left: 217px;
+    }
+
+    .Price {
+        color: var(--07, #7E88C3);
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 18px;
+        letter-spacing: -0.1px;
+        padding-left: 92px;
+    }
+
+    .Total {
+        color: var(--07, #7E88C3);
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 18px;
+        letter-spacing: -0.1px;
+        padding-left: 92px;
+    }
+
+    #first-name-amount {
+        gap: 0;
+    }
+
+    .firstItemsQuantity {
+        padding-left: 194px;
+    }
+
+    .firstItemQuantitySpan {
+        padding-left: 76px;
+    }
+
+    .secondItemsQuantity {
+        padding-left: 194px;
+    }
+
+    .secondItemQuantitySpan {
+        padding-left: 76px;
+    }
 }
