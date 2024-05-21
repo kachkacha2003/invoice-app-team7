@@ -5,16 +5,21 @@ let content = document.getElementById("content")
 let iconSun = document.getElementById("icon-sun");
 let iconMoon = document.getElementById("icon-moon");
 
+
+let invoiceRagaca = {};
+
 iconMoon.addEventListener("click", () => {
     iconSun.style.display = "block";
     iconMoon.style.display = "none";
 
-
+    body.classList.add("dark");
 })
 
 iconSun.addEventListener("click", () => {
     iconMoon.style.display = "block";
     iconSun.style.display = "none"
+
+    body.classList.remove("dark")
 });
 
 let statusInfo = document.getElementById("statusInfo")
@@ -27,6 +32,7 @@ let invoiceDate = document.getElementById("invoiceDate");
 let paymentDue = document.getElementById("paymentDue");
 let billTo = document.getElementById("bill");
 let sendMail = document.getElementById("sendMail");
+let sendMailTablet = document.getElementById("sendMail-tablet")
 
 let firstNameAmount = document.getElementById("first-name-amount");
 let firstPrice = document.getElementById("first-price")
@@ -44,6 +50,9 @@ let deleteBtn = document.getElementById("deleteBtn")
 let deleteButton = document.getElementById("Delete-btn")
 
 
+// Delete Note Tablet
+let deleteBtnTablet = document.getElementById("deleteBtn-tablet")
+
 // Canel Button
 let CanelBtn = document.getElementById("Cancel-btn");
 
@@ -53,10 +62,11 @@ let editBtn = document.getElementById("editBtn")
 let invoceId = "XM9141";
 
 
-
 async function fetchData() {
     const response = await fetch("data.json");
     const data = await response.json();
+
+    invoiceRagaca = data;
 
     const invoice = data.find(obj => obj.id === invoceId);
 
@@ -95,12 +105,16 @@ async function fetchData() {
     `
 
     sendMail.innerHTML += `
-        <p class = "clientEmail">${invoice.clientEmail}</p>
+    <p class = "clientEmail">${invoice.clientEmail}</p>
+    `
+
+    sendMailTablet.innerHTML += `
+    <p class = "clientEmail-tablet">${invoice.clientEmail}</p>
     `
 
     firstNameAmount.innerHTML += `
     <p class = "firstItemsName">${invoice.items[0].name}</p>
-    <p class = "firstItemsQuantity">${invoice.items[0].quantity} x £${invoice.items[0].total}</p>
+    <p class = "firstItemsQuantity">${invoice.items[0].quantity} x <span class = "firstItemQuantitySpan">£${invoice.items[0].total}</span></p>
     `
 
     firstPrice.innerHTML += `
@@ -109,7 +123,7 @@ async function fetchData() {
 
     secondNameAmount.innerHTML += `
     <p class = "secondItemsName">${invoice.items[1].name}</p>
-    <p class = "secondItemsQuantity">${invoice.items[1].quantity} x £${invoice.items[1].total}</p>
+    <p class = "secondItemsQuantity">${invoice.items[1].quantity} x <span class = "secondItemQuantitySpan">£${invoice.items[1].total}</span></p>
     `
 
     secondtPrice.innerHTML += `
@@ -144,15 +158,17 @@ CanelBtn.addEventListener("click", () => {
 
 // Delete Button
 async function deleteInvoiceData() {
-    const response = await fetch("data.json", {
+    const response = await fetch(`https://invoiceapi-rpgn.onrender.com/api/invoices/${invoceId}`, {
         method: "DELETE",
         headers: {
             "Content-Type": "application/json",
         },
+
     })
 
     const data = await response.json();
 
+    window.location.href = "index.html";
 }
 
 deleteButton.addEventListener("click", () => {
@@ -166,3 +182,14 @@ deleteButton.addEventListener("click", () => {
 editBtn.addEventListener("click", () => {
 
 })
+
+
+
+// deleteBtnTablet
+deleteBtnTablet.addEventListener("click", () => {
+    deleteContainer.style.display = "block"
+    content.style.opacity = "0.7";
+});
+
+
+
